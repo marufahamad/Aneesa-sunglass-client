@@ -1,0 +1,30 @@
+
+
+.banner-background {
+    background-image: url(https://i.ibb.co/2KTGp6j/Beautiful-young-cheerful-girl-wearing-glasses-rest-on-beach-at-morning.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    min-height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    color: #0d6efd;
+    transition: linear 0.5s;
+}
+
+.banner-background:hover{
+    opacity: .8;
+    color: #062a61;
+    filter: grayscale(50%);
+}
+
+@media only screen and (max-width: 767px){
+    .banner-background{        
+    background-image: url(https://i.ibb.co/GM1s9jC/001.jpg);
+    
+    background-position:bottom;
+    }
+}
+

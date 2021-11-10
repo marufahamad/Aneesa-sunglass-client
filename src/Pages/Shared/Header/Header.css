@@ -1,0 +1,9 @@
+.nav-link:focus{
+    background-color: rgb(33, 71, 175);
+    color: wheat;
+    border-radius:10px;
+}
+
+.navbar-style{
+    background-color: #0d6efd;
+}
