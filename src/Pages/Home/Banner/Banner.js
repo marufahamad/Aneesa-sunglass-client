@@ -10,8 +10,8 @@ const Banner = () => {
 
                     <Col sx={12} md={6} className="mb-5 pb-5">
                         <h1>Aneesa Sunglasses</h1>
-                        <h3>Be Yourself with a new look</h3>
-                        <h4 className="mb-5 pb-5">See everything with a new look</h4>
+                        <h3>Be Yourself with a new Look</h3>
+                        <h4 className="mb-5 pb-5 ms-4">See Everything with a new View</h4>
                     </Col>
                     <Col sx={12} md={6} className="my-5">
 

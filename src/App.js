@@ -5,7 +5,10 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Register from './Pages/Login/Register/Register';
+import Products from './Pages/Products/Products/Products';
+import Purchase from './Pages/Products/Purchase/Purchase';
 
 
 function App() {
@@ -26,8 +29,14 @@ function App() {
             <Route exact path="/register">
               <Register></Register>
             </Route>
-            <Route exact path="/dashboard">
+            <PrivateRoute exact path="/dashboard">
               <Dashboard></Dashboard>
+            </PrivateRoute>
+            <PrivateRoute exact path="/purchase/:id">
+              <Purchase></Purchase>
+            </PrivateRoute>
+            <Route exact path="/products">
+              <Products></Products>
             </Route>
           </Switch>
         </Router>

@@ -1,9 +1,7 @@
-import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
 import ProductsAll from '../../Shared/ProductsAll/ProductsAll';
-import './HomeProducts.css'
 
-const HomeProducts = () => {
+const AllProducts = () => {
     const [products, setProducts] = useState([]);
 
 
@@ -17,7 +15,7 @@ const HomeProducts = () => {
         <div className="container mt-5">
             <div className="row">
                 {
-                    products.slice(0, 6).map(product => <ProductsAll
+                    products.map(product => <ProductsAll
                         key={products.name}
                         product={product}
                     ></ProductsAll>)
@@ -31,4 +29,4 @@ const HomeProducts = () => {
     );
 };
 
-export default HomeProducts;
+export default AllProducts;

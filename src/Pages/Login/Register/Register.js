@@ -20,6 +20,11 @@ const Register = () => {
     }
 
     const handleSubmission = e => {
+        if (inputData.password !== inputData.passwordAgain) {
+            alert('your password did not match');
+            return;
+        }
+
         registerUser(inputData.email, inputData.password, inputData.name, history);
         e.preventDefault();
     }
@@ -46,7 +51,10 @@ const Register = () => {
                                             <input type="email" name="email" onBlur={handleOnBlur} placeholder="Email address" className="form-control rounded-pill border-0 shadow-sm px-4" required />
                                         </div>
                                         <div className="mb-3">
-                                            <input type="password" name="password" pattern=".{6,}" onBlur={handleOnBlur} placeholder="Password with 6 character" required className="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
+                                            <input type="password" name="password" pattern=".{6,}" onBlur={handleOnBlur} placeholder="Password minimum 6 Characters" required className="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
+                                        </div>
+                                        <div className="mb-3">
+                                            <input type="password" name="passwordAgain" pattern=".{6,}" onBlur={handleOnBlur} placeholder="Re-enter Password" required className="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
                                         </div>
                                         <div className="d-grid gap-2 mt-2">
                                             <button type="submit" className="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Register</button>
