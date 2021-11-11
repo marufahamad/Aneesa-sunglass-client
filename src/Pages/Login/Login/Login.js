@@ -47,12 +47,10 @@ const Login = () => {
                                 <div className="col-lg-10 col-xl-7 mx-auto">
                                     <h3 className="display-4">Please Login</h3>
                                     <form onSubmit={handleSubmitLogin}>
-                                        <div className="mb-3">
-                                            <input type="email" name="email" onBlur={handleOnBlur} placeholder="Email address" required autofocus="" className="form-control rounded-pill border-0 shadow-sm px-4" />
-                                        </div>
-                                        <div className="mb-3">
-                                            <input type="password" name="password" onBlur={handleOnBlur} placeholder="Password" required className="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
-                                        </div>
+                                        <input type="email" name="email" onBlur={handleOnBlur} placeholder="Email address" required autofocus="" className="form-control rounded-pill border-0 shadow-sm px-4" />
+                                        <br />
+                                        <input type="password" name="password" onBlur={handleOnBlur} placeholder="Password" required className="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
+                                        <br />
                                         <div className="d-grid gap-2 mt-2">
                                             <button type="submit" className="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign in</button>
                                         </div>
@@ -65,7 +63,7 @@ const Login = () => {
                                     <hr />
                                     <hr />
 
-                                    <Button onClick={() => signInWithGoogle(location, history)} className="btn btn-primary rounded-3">Log Out </Button>
+                                    <Button onClick={() => signInWithGoogle(location, history)} className="btn btn-primary rounded-3">Google Sign In </Button>
 
                                 </div>
                             </div>

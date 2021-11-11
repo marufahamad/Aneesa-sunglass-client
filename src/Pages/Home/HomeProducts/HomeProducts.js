@@ -1,4 +1,3 @@
-import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
 import ProductsAll from '../../Shared/ProductsAll/ProductsAll';
 import './HomeProducts.css'
@@ -8,7 +7,7 @@ const HomeProducts = () => {
 
 
     useEffect(() => {
-        fetch('glasses.json')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -18,7 +17,7 @@ const HomeProducts = () => {
             <div className="row">
                 {
                     products.slice(0, 6).map(product => <ProductsAll
-                        key={products.name}
+                        key={product._id}
                         product={product}
                     ></ProductsAll>)
                 }

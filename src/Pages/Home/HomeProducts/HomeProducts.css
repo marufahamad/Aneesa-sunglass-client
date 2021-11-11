@@ -1,15 +1,16 @@
 .card-wrapper {
     margin-bottom: 30px;
+    color: white;
 }
 
-.card {
+.card-home {
   display: inline-block;
   position: relative;
   overflow: hidden;
   min-height: 500px;
   height: 100%;
 }
-.card:hover {
+.card-home:hover {
   box-shadow: 8px 12px 31px -10px #ab98ab;
 }
 .card-img-wrapper {
@@ -22,18 +23,18 @@
 .card-img-wrapper img {
   transition: 1.5s ease;
 }
-.card:hover .card-img-wrapper img {
+.card-home:hover .card-img-wrapper img {
   transform: scale(1.15);
 }
-.card-body .card-title {
+.card-home-body .card-title {
   margin-bottom: calc(50% + 20px);
   transition: 1.5s ease;
 }
-.card:hover .card-body .card-title {
+.card-home:hover .card-home-body .card-title {
   margin-bottom: .75rem;
 }
 
-.card-body {
+.card-home-body {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -50,10 +51,10 @@
   height: auto;
   transition: 1.5s ease;
 }
-.card:hover .card-body {
+.card-home:hover .card-home-body {
   height: 50%;
   background-color: #1C75BA;
 }
-.card:hover .card-content {
+.card-home:hover .card-content {
   bottom: 0;
 }

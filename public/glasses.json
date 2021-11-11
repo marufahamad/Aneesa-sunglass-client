@@ -1,13 +1,11 @@
 [
     {
-        "id": 1,
         "name": "Blueberry",
         "image": "https://i.ibb.co/xhYGQ8V/Blue-Barry.jpg",
         "description": "Blue glass with fiber frame",
         "price": 1200
     },
     {
-        "id": 1,
         "name": "Greeny View",
         "image": "https://i.ibb.co/CtD3rdx/Greeny-View.jpg",
         "description": "Blue glass with fiber frame",

@@ -1,13 +1,15 @@
+import Button from '@restart/ui/esm/Button';
 import React, { useState } from 'react';
 import { Spinner } from 'react-bootstrap';
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
     const [inputData, setInputData] = useState({});
     const history = useHistory();
+    const location = useLocation();
 
-    const { registerUser, isLoading } = useAuth();
+    const { registerUser, isLoading, signInWithGoogle } = useAuth();
 
 
     const handleOnBlur = e => {
@@ -44,18 +46,14 @@ const Register = () => {
                                 <div className="col-lg-10 col-xl-7 mx-auto">
                                     <h3 className="display-4">Please Register</h3>
                                     <form onSubmit={handleSubmission}>
-                                        <div className="mb-3">
-                                            <input type="text" name="name" onBlur={handleOnBlur} placeholder="Full Name" className="form-control rounded-pill border-0 shadow-sm px-4" required />
-                                        </div>
-                                        <div className="mb-3">
-                                            <input type="email" name="email" onBlur={handleOnBlur} placeholder="Email address" className="form-control rounded-pill border-0 shadow-sm px-4" required />
-                                        </div>
-                                        <div className="mb-3">
-                                            <input type="password" name="password" pattern=".{6,}" onBlur={handleOnBlur} placeholder="Password minimum 6 Characters" required className="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
-                                        </div>
-                                        <div className="mb-3">
-                                            <input type="password" name="passwordAgain" pattern=".{6,}" onBlur={handleOnBlur} placeholder="Re-enter Password" required className="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
-                                        </div>
+                                        <input type="text" name="name" onBlur={handleOnBlur} placeholder="Full Name" className="form-control rounded-pill border-0 shadow-sm px-4" required />
+                                        <br />
+                                        <input type="email" name="email" onBlur={handleOnBlur} placeholder="Email address" className="form-control rounded-pill border-0 shadow-sm px-4" required />
+                                        <br />
+                                        <input type="password" name="password" pattern=".{6,}" onBlur={handleOnBlur} placeholder="Password minimum 6 Characters" required className="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
+                                        <br />
+                                        <input type="password" name="passwordAgain" pattern=".{6,}" onBlur={handleOnBlur} placeholder="Re-enter Password" required className="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
+                                        <br />
                                         <div className="d-grid gap-2 mt-2">
                                             <button type="submit" className="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Register</button>
                                         </div>
@@ -66,6 +64,10 @@ const Register = () => {
                                         </NavLink>
 
                                     </form>
+                                    <hr />
+                                    <hr />
+
+                                    <Button onClick={() => signInWithGoogle(location, history)} className="btn btn-primary rounded-3">Google Sign In </Button>
                                 </div>
                             </div>
                         </div>

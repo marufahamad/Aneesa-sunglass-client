@@ -19,6 +19,11 @@
     color: #062a61;
     filter: grayscale(50%);
 }
+.btn{
+    background: #4d0dfd;
+    color: white;
+    border: 1px solid white;
+}
 
 @media only screen and (max-width: 767px){
     .banner-background{        
