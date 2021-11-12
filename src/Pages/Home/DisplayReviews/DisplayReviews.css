@@ -1,0 +1,25 @@
+.review-massage{
+    background:lightskyblue;
+    height: 500px;
+    border: 1px dotted black;
+    overflow:scroll;
+    width: 90%;
+    border-radius: 10px;
+    
+    
+}
+.review-massage::-webkit-scrollbar {
+    display: none;
+}
+
+.custom-card-style{
+    width: 300px;
+    height: 200px;
+    color: white;
+    background: #2188d6cc;
+}
+
+.custom-card-style::-webkit-scrollbar {
+    display: none;
+}
+

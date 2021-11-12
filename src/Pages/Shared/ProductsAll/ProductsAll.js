@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ProductsAll = ({ product }) => {
     const { image, name, description, price, _id } = product;
     return (
-        <Col className="card-wrapper col-lg-4 col-md-6 col-xs-12">
+        <Col className="card-wrapper col-lg-4 col-md-6 col-12">
             <Card className="card-home">
                 <div className="card-img-wrapper">
                     <Card.Img className="card-img-top" src={image} alt="" />

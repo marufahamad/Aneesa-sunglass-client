@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
-import axios from 'axios';
 import { Card, Spinner } from 'react-bootstrap';
-import { useForm } from 'react-hook-form';
 import Header from '../../Shared/Header/Header';
 
 
