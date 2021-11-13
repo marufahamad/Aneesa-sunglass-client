@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Aneesa Sunglasses
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To visit our Site, Click: [Aneesa Home](https://aneesa-sunglasses.web.app/).
 
-## Available Scripts
+URL: https://aneesa-sunglasses.web.app/
 
-In the project directory, you can run:
+### Home Page
 
-### `yarn start`
+There are 6 section in Home page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1.  Header (simple navbar)
+2.  Banner
+3.  Products
+4.  Users Reviews
+5.  About Us (extra section)
+6.  Footer
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### All Products
 
-### `yarn test`
+will display all products and users can buy an product by pressing Buy Now button. if user not logged in, it takes user to login page after login user will redirect to purchase page. pressing Place order button after provide providing manual information it will show a alert and take user back to home page. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+User can see and delete own orders from from My Orders page in Dashboard.
 
-### `yarn build`
+### `Dashboard`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+in dashboard home, normal user will see his/her orders only but admin user will see all orders.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+in dashboard, there are 7 nested paths but normal user will see only My Orders, Pay Now which one is now under construction and Review page where user can provide his/her review about us. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+on the other hand remaining 4 paths for Admin use. Admin can see only this 4 paths in Dashboard. other 3 paths are hidden for admin.
+However, if non-admin user try to visit this 4 paths, they can see only a spinner in Dashboard home but admin user can see other 3 paths by providing path manually.
 
-### `yarn eject`
+from all orders page admin can change status
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+admin can also add new product from Add A Product page.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+form Make an Admin page, admin can change non admin user to an admin
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+from manage products page, admin can see all products name and price and can delete any product from DB.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `Login/Register`
 
-## Learn More
+there are 2 types of login. new user can register from register page which one is toggle with login page.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Hope more or lass everyone will like it. Thanks for reading.

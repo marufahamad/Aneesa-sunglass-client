@@ -13,7 +13,7 @@ const AllProducts = () => {
     console.log(products)
 
     return (
-        <div className="container mt-5">
+        <div className="container">
             <div className="row">
                 {
                     products.map(product => <ProductsAll

@@ -62,7 +62,7 @@ const SideBar = ({ url }) => {
                                         <li>
                                             <Link className="li-link" to={`${url}/makeAdmin`}>
                                                 <i className="fas fa-user-cog"></i>
-                                                <span className="links_name">Make A Admin</span>
+                                                <span className="links_name">Make An Admin</span>
                                             </Link>
                                         </li>
                                         <li>

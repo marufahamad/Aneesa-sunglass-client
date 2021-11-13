@@ -44,6 +44,7 @@ const MyOrders = () => {
                     <tr>
                         <th>Product</th>
                         <th>Price</th>
+                        <th>Status</th>
                         <th>Want to Delete</th>
                     </tr>
                 </thead>
@@ -52,6 +53,7 @@ const MyOrders = () => {
                         <tr>
                             <td>{order.ProductName}</td>
                             <td>{order.price}</td>
+                            <td>{order.Status}</td>
                             <td><Button onClick={() => handleDelete(order._id)} className="">Delete</Button></td>
                         </tr>
                     </tbody>)
