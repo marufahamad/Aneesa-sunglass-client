@@ -16,7 +16,7 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://quiet-reef-72973.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
@@ -31,8 +31,8 @@ const Purchase = () => {
 
 
     const handleOrderSubmit = e => {
-        const fullOrder = { ...order, ProductName: name, price, email, userName: displayName };
-        fetch('http://localhost:5000/orders', {
+        const fullOrder = { ...order, ProductName: name, price, email, userName: displayName, Status: "Pending" };
+        fetch('https://quiet-reef-72973.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

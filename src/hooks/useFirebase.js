@@ -78,7 +78,7 @@ const useFirebase = () => {
 
         });
         return () => unsubscribe;
-    }, []);
+    }, [auth]);
 
 
     const logOut = (history) => {
@@ -96,7 +96,7 @@ const useFirebase = () => {
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
         console.log(user)
-        fetch('http://localhost:5000/users', {
+        fetch('https://quiet-reef-72973.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -107,11 +107,13 @@ const useFirebase = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://quiet-reef-72973.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
-            .then(data => setAdmin(data.admin))
+            .then(data => {
+                setAdmin(data.admin)
+            })
     }, [user.email])
-
+    console.log(admin)
 
     return {
         registerUser,

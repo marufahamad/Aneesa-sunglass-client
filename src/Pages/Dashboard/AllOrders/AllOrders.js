@@ -1,25 +1,27 @@
 import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 
 const AllOrders = () => {
     const [orders, setOrders] = useState([]);
-    const { user } = useAuth()
+    const history = useHistory();
+
 
     useEffect(() => {
-        const url = 'http://localhost:5000/orders/all'
+        const url = 'https://quiet-reef-72973.herokuapp.com/orders/all'
         fetch(url)
             .then(res => res.json())
             .then(data => setOrders(data))
-    }, []);
+    }, [orders]);
 
 
     const handleDelete = id => {
 
         const response = window.confirm("Are you sure to Delete");
         if (response) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://quiet-reef-72973.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -34,10 +36,31 @@ const AllOrders = () => {
         }
     }
 
+    const handleUpdateStatus = id => {
+        console.log(id)
+        const response = window.confirm("Are you Shipped yet?");
+        if (response) {
+            const url = `https://quiet-reef-72973.herokuapp.com/orders/update/${id}`;
+            fetch(url, {
+                method: 'PUT'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        alert('Shipped Successfully');
+                        const updating = [...orders];
+                        setOrders(updating);
+                    }
+
+                })
+        }
+
+    }
+
 
     return (
         <div>
-            <h2>My Orders</h2>
+            <h2>All Orders</h2>
 
             <Table hover>
                 <thead>
@@ -57,8 +80,8 @@ const AllOrders = () => {
                             <td>{order.address}</td>
                             <td>{order.ProductName}</td>
                             <td>{order.price}</td>
-                            <td><Button onClick={() => handleDelete(order._id)} className="">Delete</Button></td>
-                            <td><Button className="">Status</Button></td>
+                            <td><Button onClick={() => handleDelete(order._id)} className="btn-secondary">Delete</Button></td>
+                            <td><Button onClick={() => handleUpdateStatus(order._id)} className="btn-light">{order.Status}</Button></td>
                         </tr>
                     </tbody>)
                 }

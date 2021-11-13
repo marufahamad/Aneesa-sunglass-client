@@ -5,21 +5,26 @@ import useAuth from '../../../hooks/useAuth';
 
 
 const Review = () => {
-    const [massage, setMassage] = useState('');
+    const [massage, setMassage] = useState({});
     const { user, isLoading } = useAuth();
     const { displayName } = user;
     const history = useHistory();
 
     const handleOnBlur = e => {
-        setMassage(e.target.value)
+        const field = e.target.name;
+        const value = e.target.value;
+        const newMassage = { ...massage };
+        newMassage[field] = value;
+        setMassage(newMassage);
+        console.log(newMassage)
+
     }
 
     const handleSubmitMassage = e => {
-        const uploadedData = {}
+        const uploadedData = { ...massage }
         uploadedData.userName = displayName;
-        uploadedData.massage = massage;
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://quiet-reef-72973.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -51,6 +56,11 @@ const Review = () => {
                 <br />
                 <textarea onBlur={handleOnBlur} style={{ height: "100px" }} placeholder="Review Massage" type="checkbox" name="massage" required className="form-control rounded-3] border-3 shadow-sm px-4" />
                 <br />
+                <span>1 <input onBlur={handleOnBlur} type="radio" name="rating" value="1" id="" /> </span>
+                <span>2 <input onBlur={handleOnBlur} type="radio" name="rating" value="2" id="" /> </span>
+                <span>3 <input onBlur={handleOnBlur} type="radio" name="rating" value="3" id="" /> </span>
+                <span>4 <input onBlur={handleOnBlur} type="radio" name="rating" value="4" id="" /> </span>
+                <span>5 <input onBlur={handleOnBlur} type="radio" name="rating" value="5" id="" /> </span>
                 <div className="d-grid gap-2 mt-2">
                     <button type="submit" className="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Submit Review</button>
                 </div>

@@ -3,6 +3,7 @@ import { Link, Switch, Route, useRouteMatch } from 'react-router-dom';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import AddAProduct from '../AddAProduct/AddAProduct';
 import AllOrders from '../AllOrders/AllOrders';
+import DashboardHome from '../DashboardHome/DashboardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import ManageProducts from '../ManageProducts/ManageProducts';
 import MyOrders from '../MyOrders/MyOrders';
@@ -20,6 +21,9 @@ const Dashboard = () => {
                 <SideBar url={url}></SideBar>
                 <Switch>
                     <Route exact path={`${path}`}>
+                        <DashboardHome></DashboardHome>
+                    </Route>
+                    <Route exact path={`${path}/myOrders`}>
                         <MyOrders></MyOrders>
                     </Route>
                     <Route path={`${path}/payNow`}>

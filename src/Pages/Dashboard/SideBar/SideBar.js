@@ -26,7 +26,7 @@ const SideBar = ({ url }) => {
                                     admin ? [] :
                                         <>
                                             <li>
-                                                <Link className="li-link" to={`${url}`}>
+                                                <Link className="li-link" to={`${url}/myOrders`}>
                                                     <i className="fas fa-th-large"></i>
                                                     <span className="links_name">My Orders</span>
                                                 </Link>
