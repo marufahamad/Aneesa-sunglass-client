@@ -38,7 +38,7 @@ const Footer = () => {
                             <div className="widget no-box">
                                 <h5 className="widget-title text-warning">Contact Us<span></span></h5>
 
-                                <p><a href="info@bdtourplanner.com" title="glorythemes">info@bdtourplanner.com</a></p>
+                                <p><a className="text-white" href="info@aneesaglass.com" title="glorythemes">info@aneesaglass.com</a></p>
                                 <ul className="social-footer2">
                                     <li className=""><a href="https://twitter.com/"><i className="fab fa-twitter m-2"></i></a></li>
                                     <li className=""><a href="https://www.facebook.com/"><i className="fab fa-facebook m-2"></i></a></li>

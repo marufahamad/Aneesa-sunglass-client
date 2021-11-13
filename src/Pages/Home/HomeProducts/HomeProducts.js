@@ -14,6 +14,7 @@ const HomeProducts = () => {
     console.log(products)
     return (
         <div className="container mt-5">
+            <h2 className="text-primary">PRODUCTS</h2>
             <div className="row">
                 {
                     products.slice(0, 6).map(product => <ProductsAll

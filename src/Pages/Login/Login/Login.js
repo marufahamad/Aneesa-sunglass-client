@@ -71,7 +71,7 @@ const Login = () => {
                     </div>
                 </div>
                 <div className="col-md-6 d-none d-md-flex p-0">
-                    <img width="100%" height="auto" src="https://i.ibb.co/2KTGp6j/Beautiful-young-cheerful-girl-wearing-glasses-rest-on-beach-at-morning.jpg" alt="" />
+                    <img width="100%" height="auto" src="https://i.ibb.co/QfCfkc1/Beautiful-young-cheerful-girl-wearing-glasses-rest-on-beach-at-morning.jpg" alt="" />
                 </div>
             </div>
         </div>

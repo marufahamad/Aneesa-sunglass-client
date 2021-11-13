@@ -3,6 +3,7 @@ import { useHistory, useParams } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 import { Card, Spinner } from 'react-bootstrap';
 import Header from '../../Shared/Header/Header';
+import Footer from '../../Shared/Footer/Footer';
 
 
 const Purchase = () => {
@@ -60,7 +61,7 @@ const Purchase = () => {
         <div className="bg-white" >
             <Header></Header>
             <div className="row m-0">
-                <div className="col-md-6 d-md-flex p-0">
+                <div className="col-md-6 d-md-flex p-0 mt-4">
                     <Card className="mx-auto border-0" style={{ width: "375px" }}>
                         <Card.Title>{name}</Card.Title>
                         <Card.Img style={{ width: "100%" }} className=" mx-auto" variant="top" src={image} />
@@ -103,6 +104,7 @@ const Purchase = () => {
                 </div>
 
             </div>
+            <Footer></Footer>
         </div>
     );
 };
